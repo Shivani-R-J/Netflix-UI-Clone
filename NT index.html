@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Netflix UI Clone</title>
+  <link rel="stylesheet" href="NT style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo">
+
+  <ul class="nav-links">
+    <li class="nav-item active" onclick="setActive(this); showTV()">TV Shows</li>
+    <li class="nav-item" onclick="setActive(this); showMovies()">Movies</li>
+    <li class="nav-item" onclick="setActive(this); showRecent()">Recently Added</li>
+    <li class="nav-item" onclick="setActive(this); showList()">My List</li>
+  </ul>
+
+  <input type="text" id="search" placeholder="Search" onkeyup="searchMovies()">
+</nav>
+
+<!-- BANNER -->
+<header class="banner">
+  <div class="banner-content">
+    <h1 class="banner-title">Stranger Things</h1>
+    <p class="banner-desc">
+      A small town uncovers a mystery involving secret experiments and supernatural forces.
+    </p>
+    <div class="banner-buttons">
+      <button class="btn play">▶ Play</button>
+      <button class="btn list">＋ My List</button>
+    </div>
+  </div>
+  <div class="banner-fade"></div>
+</header>
+
+<!-- DYNAMIC ROW -->
+<section class="row">
+  <h2 id="row-title">Popular on Netflix</h2>
+  <div class="row-posters fade" id="content"></div>
+</section>
+
+<!-- EXTRA ROWS -->
+<section class="row">
+  <h2>Trending Now</h2>
+  <div class="row-posters">
+    <img src="images/movie6.jpg" class="poster">
+    <img src="images/movie7.jpg" class="poster">
+    <img src="images/movie8.jpg" class="poster">
+  </div>
+</section>
+
+<section class="row">
+  <h2>Top Rated</h2>
+  <div class="row-posters">
+    <img src="images/movie3.jpg" class="poster">
+    <img src="images/movie4.jpg" class="poster">
+    <img src="images/movie5.jpg" class="poster">
+  </div>
+</section>
+
+<script src="NT script.js"></script>
+</body>
+</html>
